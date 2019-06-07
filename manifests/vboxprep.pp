@@ -39,4 +39,23 @@ class cconnect::vboxprep {
       require => File['C:/nhdata'],
     }
   }
+
+  elsif $::osfamily == 'RedHat' {
+
+    # Place the extenstion pack
+    archive { '/var/tmp/nhdata/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack':
+      ensure  => 'present',
+      extract => false,
+      source  => 's3://nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
+      require => File['/var/tmp/nhdata'],
+    }
+
+    # Place the Virtualbox installer
+    archive { '/var/tmp/nhdata/Virtualbox_Redhat.rpm':
+      ensure  => 'present',
+      extract => false,
+      source  => 's3://nh-storage/Virtualbox_Redhat.rpm',
+      require => File['/var/tmp/nhdata'],
+    }
+  }
 }
