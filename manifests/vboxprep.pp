@@ -51,10 +51,10 @@ class cconnect::vboxprep {
     }
 
     # Place the Virtualbox installer
-    archive { '/var/tmp/nhdata/Virtualbox_Redhat.rpm':
+    archive { '/var/tmp/nhdata/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm':
       ensure  => 'present',
       extract => false,
-      source  => 's3://nh-storage/Virtualbox_Redhat.rpm',
+      source  => 's3://nh-storage/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm',
       require => File['/var/tmp/nhdata'],
     }
   }
