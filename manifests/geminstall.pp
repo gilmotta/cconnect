@@ -25,16 +25,16 @@ class cconnect::geminstall {
     package { 'colorize':
       ensure   => 'installed',
       provider => 'gem',
-      source   => 'C:/nhdata/colorize-0.8.1.gem',
-      require  => Archive['C:/nhdata/colorize-0.8.1.gem'],
+      source   => 'C:\\nhdata\\colorize-0.8.1.gem',
+      require  => Archive['C:\\nhdata\\colorize-0.8.1.gem'],
     }
 
     # Install the JSON Gem
     package { 'json':
       ensure   => 'installed',
       provider => 'gem',
-      source   => 'C:/nhdata/json-2.2.0.gem',
-      require  => Archive['C:/nhdata/json-2.2.0.gem'],
+      source   => 'C:\\nhdata\\json-2.2.0.gem',
+      require  => Archive['C:\\nhdata\\json-2.2.0.gem'],
     }
   }
 }
