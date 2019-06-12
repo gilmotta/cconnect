@@ -28,23 +28,23 @@ class cconnect::vboxprep {
   elsif $::osfamily == 'Windows' {
 
     # Place the extension Pack
-    file { 'C:\\nhdata\\Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack':
+    file { 'C:/nhdata/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack':
       ensure  => 'present',
       owner   => 'Administrators',
       group   => 'Users',
       mode    => '0755',
       source  => 's3://nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
-      require => File['C:\\nhdata'],
+      require => File['C:/nhdata'],
     }
 
     # Place the Virtualbox Installer
-    file { 'C:\\nhdata\\VirtualBox-6.0.8-130520-Win.exe':
+    file { 'C:/nhdata/VirtualBox-6.0.8-130520-Win.exe':
       ensure  => 'present',
       owner   => 'Administrators',
       group   => 'Users',
       mode    => '0755',
       source  => 's3://nh-storage/VirtualBox-6.0.8-130520-Win.exe',
-      require => File['C:\\nhdata'],
+      require => File['C:/nhdata'],
     }
   }
 

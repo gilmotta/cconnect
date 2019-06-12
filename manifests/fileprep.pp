@@ -46,7 +46,7 @@ class cconnect::fileprep {
   elsif $::osfamily == 'Windows' {
 
     # Make sure staging area exists
-    file { 'C:\\nhdata':
+    file { 'C:/nhdata':
       ensure => 'directory',
       owner  => 'Administrators',
       group  => 'Users',
@@ -54,33 +54,33 @@ class cconnect::fileprep {
     }
 
     # Place confiug.rb
-    file { 'C:\\nhdata\\config.rb':
+    file { 'C:/nhdata/config.rb':
       ensure  => 'present',
       owner   => 'Administrators',
       group   => 'Users',
       mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/config.rb',
-      require => File['C:\\nhdata'],
+      require => File['C:/nhdata'],
     }
 
     # Place Colorize Gem
-    file { 'C:\\nhdata\\colorize-0.8.1.gem':
+    file { 'C:/nhdata/colorize-0.8.1.gem':
       ensure  => 'present',
       owner   => 'Administrators',
       group   => 'Users',
       mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/colorize-0.8.1.gem',
-      require => File['C:\\nhdata'],
+      require => File['C:/nhdata'],
     }
 
     # Place json Gem
-    file { 'C:\\nhdata\\json-2.2.0.gem':
+    file { 'C:/nhdata/json-2.2.0.gem':
       ensure  => 'present',
       owner   => 'Administrators',
       group   => 'Users',
       mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/json-2.2.0.gem',
-      require => File['C:\\nhdata'],
+      require => File['C:/nhdata'],
     }
   }
 }
