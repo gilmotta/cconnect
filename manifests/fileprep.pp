@@ -22,14 +22,6 @@ class cconnect::fileprep {
       require => File['/var/tmp/nhdata'],
     }
 
-    file { '/var/tmp/nhdata/config.rb':
-      ensure  => 'file',
-      owner   => 'root',
-      group   => 'root',
-      mode    => '0755',
-      require => File['/var/tmp/nhdata/config.rb'],
-    }
-
     # Place colorize Gem
     file { '/var/tmp/nhdata/colorize-0.8.1.gem':
       ensure  => 'present',
