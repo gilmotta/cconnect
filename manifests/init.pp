@@ -6,9 +6,4 @@ class cconnect {
   include cconnect::geminstall
   include cconnect::vboxinstall
 
-  Class['cconnect::fileprep']
-  ->Class['cconnect::vboxprep']
-  ->Class['cconnect::geminstall']
-  ->Class['cconnect::vboxinstall']
-
 }
