@@ -28,7 +28,6 @@ class cconnect::vboxprep {
       ensure  => 'present',
       extract => false,
       source  => 's3://nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
-      require => File['C:\\nhdata'],
     }
 
     # Place the Virtualbox Installer
@@ -36,7 +35,6 @@ class cconnect::vboxprep {
       ensure  => 'present',
       extract => false,
       source  => 's3://nh-storage/VirtualBox-6.0.8-130520-Win.exe',
-      require => File['C:\\nhdata'],
     }
   }
 
