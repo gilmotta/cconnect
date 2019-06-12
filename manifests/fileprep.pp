@@ -13,9 +13,8 @@ class cconnect::fileprep {
     }
 
     # Place config.rb
-    archive { '/var/tmp/nhdata/config.rb':
+    file { '/var/tmp/nhdata/config.rb':
       ensure  => 'present',
-      extract => false,
       source  => 'https://s3.amazonaws.com/nh-storage/config.rb',
       require => File['/var/tmp/nhdata'],
     }
@@ -25,21 +24,19 @@ class cconnect::fileprep {
       owner   => 'root',
       group   => 'root',
       mode    => '0755',
-      require => Archive['/var/tmp/nhdata/config.rb'],
+      require => File['/var/tmp/nhdata/config.rb'],
     }
 
     # Place colorize Gem
-    archive { '/var/tmp/nhdata/colorize-0.8.1.gem':
+    file { '/var/tmp/nhdata/colorize-0.8.1.gem':
       ensure  => 'present',
-      extract => false,
       source  => 'https://s3.amazonaws.com/nh-storage/colorize-0.8.1.gem',
       require => File['/var/tmp/nhdata'],
     }
 
     # Place json Gem
-    archive { '/var/tmp/nhdata/json-2.2.0.gem':
+    file { '/var/tmp/nhdata/json-2.2.0.gem':
       ensure  => 'present',
-      extract => false,
       source  => 'https://s3.amazonaws.com/nh-storage/json-2.2.0.gem',
       require => File['/var/tmp/nhdata'],
     }
@@ -56,25 +53,22 @@ class cconnect::fileprep {
     }
 
     # Place confiug.rb
-    archive { 'C:\\nhdata\\config.rb':
+    file { 'C:\\nhdata\\config.rb':
       ensure  => 'present',
-      extract => false,
       source  => 'https://s3.amazonaws.com/nh-storage/config.rb',
       require => File['C:\\nhdata'],
     }
 
     # Place Colorize Gem
-    archive { 'C:\\nhdata\\colorize-0.8.1.gem':
+    file { 'C:\\nhdata\\colorize-0.8.1.gem':
       ensure  => 'present',
-      extract => false,
       source  => 'https://s3.amazonaws.com/nh-storage/colorize-0.8.1.gem',
       require => File['C:\\nhdata'],
     }
 
     # Place json Gem
-    archive { 'C:\\nhdata\\json-2.2.0.gem':
+    file { 'C:\\nhdata\\json-2.2.0.gem':
       ensure  => 'present',
-      extract => false,
       source  => 'https://s3.amazonaws.com/nh-storage/json-2.2.0.gem',
       require => File['C:\\nhdata'],
     }
