@@ -6,8 +6,8 @@ class cconnect::vboxinstall {
     package { 'virtualbox':
       ensure   => 'installed',
       provider => 'dpkg',
-      source   => '/var/tmp/nhdata/virtualbox-6.0_6.0.8-130520_Ubuntu_bionic_amd64.deb',
-      require  => File['/var/tmp/nhdata/virtualbox-6.0_6.0.8-130520_Ubuntu_bionic_amd64.deb'],
+      source   => '/tmp/nhdata/virtualbox-6.0_6.0.8-130520_Ubuntu_bionic_amd64.deb',
+      require  => File['/tmp/nhdata/virtualbox-6.0_6.0.8-130520_Ubuntu_bionic_amd64.deb'],
     }
   }
 
@@ -25,8 +25,8 @@ class cconnect::vboxinstall {
     package { 'virtualbox':
       ensure   => 'installed',
       provider => 'rpm',
-      source   => '/var/tmp/nhdata/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm',
-      require  => File['/var/tmp/nhdata/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm'],
+      source   => '/tmp/nhdata/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm',
+      require  => File['/tmp/nhdata/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm'],
     }
   }
 }
