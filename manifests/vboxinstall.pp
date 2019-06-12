@@ -17,7 +17,6 @@ class cconnect::vboxinstall {
       ensure   => 'installed',
       provider => 'windows',
       source   => 'C:/nhdata/VirtualBox-6.0.8-130520-Win.exe',
-      require  => File['C:/nhdata/VirtualBox-6.0.8-130520-Win.exe'],
     }
   }
 

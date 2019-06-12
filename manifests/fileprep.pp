@@ -60,7 +60,6 @@ class cconnect::fileprep {
       group   => 'Users',
       mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/config.rb',
-      require => File['C:/nhdata'],
     }
 
     # Place Colorize Gem
@@ -70,7 +69,6 @@ class cconnect::fileprep {
       group   => 'Users',
       mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/colorize-0.8.1.gem',
-      require => File['C:/nhdata'],
     }
 
     # Place json Gem
@@ -80,7 +78,6 @@ class cconnect::fileprep {
       group   => 'Users',
       mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/json-2.2.0.gem',
-      require => File['C:/nhdata'],
     }
   }
 }
