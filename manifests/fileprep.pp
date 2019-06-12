@@ -15,6 +15,9 @@ class cconnect::fileprep {
     # Place config.rb
     file { '/var/tmp/nhdata/config.rb':
       ensure  => 'present',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/config.rb',
       require => File['/var/tmp/nhdata'],
     }
@@ -30,6 +33,9 @@ class cconnect::fileprep {
     # Place colorize Gem
     file { '/var/tmp/nhdata/colorize-0.8.1.gem':
       ensure  => 'present',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/colorize-0.8.1.gem',
       require => File['/var/tmp/nhdata'],
     }
@@ -37,6 +43,9 @@ class cconnect::fileprep {
     # Place json Gem
     file { '/var/tmp/nhdata/json-2.2.0.gem':
       ensure  => 'present',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/json-2.2.0.gem',
       require => File['/var/tmp/nhdata'],
     }
@@ -55,6 +64,9 @@ class cconnect::fileprep {
     # Place confiug.rb
     file { 'C:\\nhdata\\config.rb':
       ensure  => 'present',
+      owner   => 'Administrators',
+      group   => 'Users',
+      mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/config.rb',
       require => File['C:\\nhdata'],
     }
@@ -62,6 +74,9 @@ class cconnect::fileprep {
     # Place Colorize Gem
     file { 'C:\\nhdata\\colorize-0.8.1.gem':
       ensure  => 'present',
+      owner   => 'Administrators',
+      group   => 'Users',
+      mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/colorize-0.8.1.gem',
       require => File['C:\\nhdata'],
     }
@@ -69,6 +84,9 @@ class cconnect::fileprep {
     # Place json Gem
     file { 'C:\\nhdata\\json-2.2.0.gem':
       ensure  => 'present',
+      owner   => 'Administrators',
+      group   => 'Users',
+      mode    => '0644',
       source  => 'https://s3.amazonaws.com/nh-storage/json-2.2.0.gem',
       require => File['C:\\nhdata'],
     }
