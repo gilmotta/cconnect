@@ -2,7 +2,7 @@
 class cconnect::fileprep {
 
   # Choose how to place files based on OS
-  if $::osfamily == 'RedHat' or 'Debian' {
+  if $::osfamily == 'RedHat' {
 
     # Make sure staging area exists
     file { '/tmp/nhdata':
