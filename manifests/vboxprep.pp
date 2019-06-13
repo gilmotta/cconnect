@@ -10,7 +10,7 @@ class cconnect::vboxprep {
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
-      source  => 's3://nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
+      source  => 'https://s3.amazonaws.com/nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
       require => File['/tmp/nhdata'],
     }
 
@@ -20,7 +20,7 @@ class cconnect::vboxprep {
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
-      source  => 's3://nh-storage/virtualbox-6.0_6.0.8-130520_Ubuntu_bionic_amd64.deb',
+      source  => 'https://s3.amazonaws.com/nh-storage/virtualbox-6.0_6.0.8-130520_Ubuntu_bionic_amd64.deb',
       require => File['/tmp/nhdata'],
     }
   }
@@ -33,7 +33,7 @@ class cconnect::vboxprep {
       owner  => 'Administrators',
       group  => 'Users',
       mode   => '0755',
-      source => 's3://nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
+      source => 'https://s3.amazonaws.com/nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
     }
 
     # Place the Virtualbox Installer
@@ -42,7 +42,7 @@ class cconnect::vboxprep {
       owner  => 'Administrators',
       group  => 'Users',
       mode   => '0755',
-      source => 's3://nh-storage/VirtualBox-6.0.8-130520-Win.exe',
+      source => 'https://s3.amazonaws.com/nh-storage/VirtualBox-6.0.8-130520-Win.exe',
     }
   }
 
@@ -54,7 +54,7 @@ class cconnect::vboxprep {
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
-      source  => 's3://nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
+      source  => 'https://s3.amazonaws.com/nh-storage/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack',
       require => File['/tmp/nhdata'],
     }
 
@@ -64,7 +64,7 @@ class cconnect::vboxprep {
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
-      source  => 's3://nh-storage/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm',
+      source  => 'https://s3.amazonaws.com/nh-storage/VirtualBox-6.0-6.0.8_130520_el7-1.x86_64.rpm',
       require => File['/tmp/nhdata'],
     }
   }
